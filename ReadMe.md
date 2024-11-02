@@ -13,3 +13,10 @@ Instead of directly manipulating the DOM (programming interface representing the
 
 Components helps us write reusable, modular and better organized code.
 
+### What will i learn ?
+
+- Building components ✅
+- Rendering markup with JSX
+- Managing state
+- Passing input via props
+- Debugging React apps
