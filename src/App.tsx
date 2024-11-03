@@ -1,7 +1,7 @@
-import Message from './Message';
+import ListGroup from './components/ListGroup';
 
 function App() {
- return  <div className= "text-5xl text-green-700 font-bold underline"><Message/></div>; 
+ return  <div className= ""><ListGroup/></div>; 
 }
 
 export default App;
