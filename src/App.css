@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sucess: 153, 204, 51;
+  --warning: 255, 153, 102;
+  --error: 204, 51, 0;
+
+  --background: 245, 245, 247;
+
+  --cta: 120, 0, 0;
+
+  --border: 204, 197, 185;
+  --card: 255, 255, 255;
+  --card_secondary: 37, 36, 34;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sucess: 153, 204, 51;
+    --warning: 255, 153, 102;
+    --error: 204, 51, 0;
+
+    --background: 20, 20, 20;
+
+    --cta: 120, 0, 0;
+
+    --border: 204, 197, 185;
+    --card: 37, 36, 34;
+    --card_secondary: 37, 36, 34;
+  }
+}
+
 @layer components {
   * {
     margin: 0;
@@ -10,6 +40,6 @@
   }
 
   body {
-    @apply bg-gray-900;
+    @apply bg-background;
   }
 }
