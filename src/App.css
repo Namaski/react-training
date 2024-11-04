@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.light {
   --sucess: 153, 204, 51;
   --warning: 255, 153, 102;
   --error: 204, 51, 0;
@@ -13,23 +13,25 @@
 
   --border: 204, 197, 185;
   --card: 255, 255, 255;
-  --card_secondary: 37, 36, 34;
+  --card_secondary: 198, 198, 198;
+
+  --text: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sucess: 153, 204, 51;
-    --warning: 255, 153, 102;
-    --error: 204, 51, 0;
+.dark {
+  --sucess: 153, 204, 51;
+  --warning: 255, 153, 102;
+  --error: 204, 51, 0;
 
-    --background: 20, 20, 20;
+  --background: 30, 30, 30;
 
-    --cta: 120, 0, 0;
+  --cta: 120, 0, 0;
 
-    --border: 204, 197, 185;
-    --card: 37, 36, 34;
-    --card_secondary: 37, 36, 34;
-  }
+  --border: 204, 197, 185;
+  --card: 60, 60, 60;
+  --card_secondary: 198, 198, 198;
+
+  --text: 255, 255, 255;
 }
 
 @layer components {

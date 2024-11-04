@@ -15,6 +15,8 @@ export default {
         card: "rgba(var(--card))",
         card_secondary: "rgba(var(--card_secondary))",
 
+        text: "rgba(var(--text))",
+
         sucess: "rgba(var(--sucess))",
         warning: "rgba(var(--warning))",
         error: "rgba(var(--error))"
