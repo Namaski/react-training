@@ -24,11 +24,14 @@ function App() {
   //     document.body.classList.add("light");
   //   }
   // }, []);
+
+  let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
+
   return (
     <div>
       <ThemeSwitch />
       <div className="">
-        <ListGroup />
+        <ListGroup items={items} heading="Cities" />
       </div>
     </div>
   );

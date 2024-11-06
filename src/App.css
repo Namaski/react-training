@@ -54,4 +54,8 @@
   li {
     @apply text-text;
   }
+
+  .selected {
+    @apply text-cta font-bold bg-card_secondary !important;
+  }
 }
