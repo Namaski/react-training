@@ -1,13 +1,18 @@
 // {items: [], heading: string}
+// Interface is for the input or argument passed to a componen
 interface Props {
   items: string[];
   heading: string;
+  // (item: string) => void
+  onSelectItem: (item: string) => void;
 }
 
 import { MouseEvent, useState } from "react";
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
+
   // hook: for a component with data that can change over time, exemple :
+  // useState is for the internal data managed by a component or data that can change over time
   const arr = useState(-1);
   // It return :
   arr[0]; // variable (selected index)
@@ -21,7 +26,7 @@ function ListGroup({ items, heading }: Props) {
 
   return (
     <>
-      <h1 className="mx-4 my-2 font-bold">The List :</h1>
+      <h1 className="mx-4 my-2 font-bold">{heading}</h1>
 
       {/*CONDITIONAL RENDERING : I DONT KNOW TOTAL NOSENSE FOR ME => (TRUE && 'hello') return 'hello' ??? */}
       {items.length === 0 && <p>No item found</p>}
@@ -33,6 +38,7 @@ function ListGroup({ items, heading }: Props) {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
             aria-current={selectedIndex === index && "true"}
             href="#"

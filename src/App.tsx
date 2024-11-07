@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ListGroup from "./components/ListGroup";
 import ThemeSwitch from "./components/ThemeSwitch";
+import Alert from "./components/Alert";
 
 function App() {
   // useEffect(() => {
@@ -27,13 +28,28 @@ function App() {
 
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
 
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+
   return (
-    <div>
-      <ThemeSwitch />
-      <div className="">
-        <ListGroup items={items} heading="Cities" />
+    <>
+      <header>
+        <ThemeSwitch />
+        <nav className="">
+          <ListGroup
+            items={items}
+            heading="Cities"
+            onSelectItem={handleSelectItem}
+          />
+        </nav>
+      </header>
+      <div>
+        <Alert>
+          <span>Hello World</span>
+        </Alert>
       </div>
-    </div>
+    </>
   );
 }
 
