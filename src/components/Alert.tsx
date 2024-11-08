@@ -2,12 +2,13 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
+  className?: string;
 }
 
-const Alert = ({ children }: Props) => {
+const Alert = ({ children, className }: Props) => {
   return (
     <div
-      className="flex items-center p-4 text-sm  border border-border rounded-lg  text-text"
+      className={`flex items-center p-4 text-sm  border border-border rounded-lg  text-text ${className} `}
       role="alert"
     >
       <svg
