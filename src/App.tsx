@@ -17,11 +17,16 @@ function App() {
 
   const handleClickButton = () => {
     setAlertVisible(true);
-  };
-
-  const handleCloseAlert = () => {
     setAlertVisible(false);
   };
+
+  // const handleClickButton = () => {
+  //   if (selectedItem) {
+  //     console.log("Button clicked with selected item:", selectedItem);
+  //   } else {
+  //     console.log("Button clicked without selected item");
+  //   }
+  // };
 
   return (
     <>
@@ -47,9 +52,7 @@ function App() {
           onClickButton={handleClickButton}
         />
 
-        {alertVisible && (
-          <MyCloseAlert onClose={handleCloseAlert}>New alert !</MyCloseAlert>
-        )}
+        {alertVisible && <MyCloseAlert>New alert !</MyCloseAlert>}
       </div>
     </>
   );
