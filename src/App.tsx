@@ -7,12 +7,12 @@ import MyCloseAlert from "./components/MyCloseAlert";
 
 function App() {
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  // const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [alertVisible, setAlertVisible] = useState(false);
 
   const handleSelectItem = (item: string) => {
     console.log(item);
-    setSelectedItem(item);
+    // setSelectedItem(item);
   };
 
   const handleClickButton = () => {
